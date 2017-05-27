@@ -1,0 +1,27 @@
+<html>
+<body>
+<pre>
+    hello
+    $!{value1}
+    $!{map}
+
+    #foreach($key in $map.keySet())
+        key : $key        num: $map.get($key)
+    #end
+
+    #foreach($entry in $map.entrySet())
+       key:  $entry.key   num: $entry.value;
+    #end
+
+     #set($hello = "hello")
+    #set($helloworld1 = "$!{hello} world")
+    $!hello
+    $helloworld1
+    #set($helloworld2 = '$!{hello} world')
+    $helloworld2
+
+
+    hello again
+</pre>
+</body>
+</html>
