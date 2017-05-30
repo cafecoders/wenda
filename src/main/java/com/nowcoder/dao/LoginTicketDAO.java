@@ -21,6 +21,6 @@ public interface LoginTicketDAO {
     LoginTicket selectByTicket(String ticket);
 
     @Update({"update ", TABLE_NAME, " set status = #{status} where ticket = #{ticket}"})
-    void updateStatus(LoginTicket loginTicket);
+    void updateStatus(@Param("ticket") String ticket, @Param("status")int status);
 
 }

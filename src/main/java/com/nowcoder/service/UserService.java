@@ -99,4 +99,9 @@ public class UserService {
 
         return loginTicket.getTicket();
     }
+
+    public void logout(String ticket){
+
+        loginTicketDAO.updateStatus(ticket, 1);
+    }
 }
