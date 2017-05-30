@@ -21,13 +21,13 @@ import java.util.Map;
 public class IndexController {
     private static final Logger logger = LoggerFactory.getLogger(LogAspect.class);
     @Autowired
-    WendaService wendaSerice;
+    WendaService wendaService;
 
     @RequestMapping(path = {"/","/index"})
     @ResponseBody
     public String index(){
         logger.info("VISIT HOME");
-        return "Hello " + wendaSerice.getMessage(1);
+        return "Hello " + wendaService.getMessage(1);
     }
 
     @RequestMapping(path = {"/profile/{groupId}/{userId}"}, method = {RequestMethod.GET})

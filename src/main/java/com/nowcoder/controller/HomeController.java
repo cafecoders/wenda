@@ -10,14 +10,13 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
 import javax.swing.text.View;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * Created by Administrator on 2017/5/25 0025.
@@ -57,4 +56,30 @@ public class HomeController {
 
         return vos;
     }
+
+  /*  @RequestMapping(path = {"/reg"}, method = {RequestMethod.POST})
+    public String register(Model model,
+                           @RequestParam("username") String username,
+                           @RequestParam("password") String password){
+        Map<String, String> map = userService.register(username, password);
+        try {
+            if (map.containsKey("msg")) {
+                model.addAttribute("msg", map.get("msg"));
+                return "login";
+            }
+            return "redirect:/";
+        }catch(Exception e){
+            logger.error("注册异常" + e.getMessage());
+            return "login";
+        }
+
+    }
+
+    @RequestMapping(path = {"/reglogin"}, method = {RequestMethod.GET})
+    public String reg(Model model){
+        return "login";
+    }*/
+
+
+
 }
