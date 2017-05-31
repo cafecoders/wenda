@@ -1,6 +1,8 @@
 package com.nowcoder.controller;
 
+import com.ctc.wstx.util.StringUtil;
 import com.nowcoder.service.UserService;
+import org.apache.commons.lang.StringUtils;
 import org.apache.zookeeper.Login;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -29,7 +31,7 @@ public class LoginController {
            @RequestMapping(path = {"/reg"}, method = {RequestMethod.POST})
         public String register(Model model,
                 @RequestParam("username") String username,
-                @RequestParam("password") String password,
+                @RequestParam("password") String password, @RequestParam(value = "next", required = false) String next,
                 HttpServletResponse response){
             Map<String, String> map = userService.register(username, password);
             try {
@@ -37,6 +39,8 @@ public class LoginController {
                     Cookie cookie = new Cookie("ticket", map.get("ticket"));
                     cookie.setPath("/");
                     response.addCookie(cookie);
+                    if(StringUtils.isNotBlank(next))
+                        return "redirect:" + next;
                     return "redirect:/";
                 }else{
                     model.addAttribute("msg", map.get("msg"));
@@ -54,6 +58,7 @@ public class LoginController {
     public String login(Model model,
                            @RequestParam("username") String username,
                            @RequestParam("password") String password,
+                           @RequestParam(value = "next", required = false) String next,
                            HttpServletResponse response){
         Map<String, String> map = userService.login(username, password);
         try {
@@ -61,6 +66,8 @@ public class LoginController {
                 Cookie cookie = new Cookie("ticket", map.get("ticket"));
                 cookie.setPath("/");
                 response.addCookie(cookie);
+                if(StringUtils.isNotBlank(next))
+                    return "redirect:" + next;
                 return "redirect:/";
             }else{
                 model.addAttribute("msg", map.get("msg"));
@@ -74,7 +81,8 @@ public class LoginController {
     }
 
     @RequestMapping(path = {"/reglogin"}, method = {RequestMethod.GET})
-    public String reg(Model model){
+    public String reg(Model model,@RequestParam(value = "next", required = false) String next){
+        model.addAttribute("next", next);
         return "login";
     }
 
