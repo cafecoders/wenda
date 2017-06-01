@@ -18,4 +18,9 @@ public class QuestionService {
     public List<Question> getLatestQuestions(int userId, int offset, int limit){
         return questionDAO.selectLatestQuestions(userId, offset, limit);
     }
+
+    public int addQuestion(Question question){
+        //filter
+        return questionDAO.addQuestion(question) > 0 ? question.getId() : 0;
+    }
 }
