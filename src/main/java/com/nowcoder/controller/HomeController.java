@@ -2,6 +2,7 @@ package com.nowcoder.controller;
 
 import com.nowcoder.aspect.LogAspect;
 import com.nowcoder.model.Question;
+import com.nowcoder.model.User;
 import com.nowcoder.model.ViewObject;
 import com.nowcoder.service.QuestionService;
 import com.nowcoder.service.UserService;
@@ -30,12 +31,24 @@ public class HomeController {
     @Autowired
     QuestionService questionService;
 
+
     @RequestMapping(path = {"/user/{userId}"}, method = {RequestMethod.GET})
     public String userIndex(Model model,@PathVariable("userId") int userId){
         List<ViewObject> vos = getQuestions(userId, 0, 10);
         model.addAttribute("vos", vos);
         return "index";
     }
+
+/*
+    @RequestMapping(path = {"/question/{qid}"}, method = {RequestMethod.GET})
+    public String questionDetail(Model model,@PathVariable("qid") int qid){
+        Question question = questionService.getQusetion(qid);
+        User user = userService.getUser(question.getUserId());
+        model.addAttribute("question", question);
+        model.addAttribute("user", user);
+        return "detail";
+    }
+*/
 
     @RequestMapping(path = {"/"}, method = {RequestMethod.GET})
     public String home(Model model){

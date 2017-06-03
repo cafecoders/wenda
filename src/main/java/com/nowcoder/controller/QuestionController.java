@@ -2,13 +2,16 @@ package com.nowcoder.controller;
 
 import com.nowcoder.model.HostHolder;
 import com.nowcoder.model.Question;
+import com.nowcoder.model.User;
 import com.nowcoder.service.QuestionService;
+import com.nowcoder.service.UserService;
 import com.nowcoder.util.WendaUtil;
 import com.sun.xml.internal.ws.api.model.wsdl.WSDLBoundOperation;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Date;
@@ -22,6 +25,9 @@ public class QuestionController {
     private final static int ANONYMOUS_ID = 3;
     @Autowired
     QuestionService questionService;
+
+    @Autowired
+    UserService userService;
 
     @Autowired
     HostHolder hostHolder;
@@ -51,4 +57,14 @@ public class QuestionController {
 
         return WendaUtil.getJSONString(1, "failed!");
     }
+
+    @RequestMapping(path = {"/question/{qid}"}, method = {RequestMethod.GET})
+    public String questionDetail(Model model,@PathVariable("qid") int qid){
+        Question question = questionService.getQusetion(qid);
+        User user = userService.getUser(question.getUserId());
+        model.addAttribute("question", question);
+        model.addAttribute("user", user);
+        return "detail";
+    }
+
 }
