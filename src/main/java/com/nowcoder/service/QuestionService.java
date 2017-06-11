@@ -34,4 +34,8 @@ public class QuestionService {
     public Question getQusetion(int id){
         return questionDAO.getQuestionById(id);
     }
+
+    public int updateCommnetCount(int commentCount, int id){
+        return questionDAO.updateCommentCount(commentCount, id);
+    }
 }

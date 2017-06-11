@@ -121,10 +121,10 @@ public class SensitiveService implements InitializingBean{
 
     }
 
-   /* public static void main(String[] args){
+    public static void main(String[] args){
         SensitiveService s = new SensitiveService();
-        s.addWord("习近平");
-        s.addWord("中共");
-        System.out.print(s.filter("   w  w习`ω´近 平在这次活动中共捐款5000元"));
-    }*/
+        s.addWord("s");
+        s.addWord("stone");
+        System.out.print(s.filter(" this is sstone"));
+    }
 }
