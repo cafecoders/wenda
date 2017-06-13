@@ -20,9 +20,18 @@ public interface MessageDAO {
     int addMessage(Message message);
 
     @Select({"select ", SELECT_FIELDS, " from " , TABLE_NAME,
-            " where conversation_id = #{conversationId} order by created_date desc limit #{limit}, offset #{offset}"})
+            " where conversation_id = #{conversationId} order by created_date desc limit #{offset},#{limit}"})
     List<Message> getConversationDetail(@Param("conversationId") String conversationId,
-                                @Param("limit") int limit,
-                                @Param("offset") int offset);
+                                        @Param("offset") int offset,
+                                        @Param("limit") int limit);
+
+    @Select({"select ", INSERT_FIELDS, " ,count(id) as id  from (select * from " , TABLE_NAME,
+            " where from_id=#{userId} or to_id = #{userId} order by created_date desc) tt group by conversation_id order by created_date desc limit #{offset}, #{limit} "})
+    List<Message> getConversationList(@Param("userId") int userId,
+                                        @Param("offset") int offset,
+                                        @Param("limit") int limit);
+
+    @Select({"select count(id) from ", TABLE_NAME, " where has_read = 0 and to_id = #{userId} and conversation_id = #{conversationId}"})
+    int getConversationUnread(@Param("userId") int userId, @Param("conversationId") String conversationId);
 
 }
