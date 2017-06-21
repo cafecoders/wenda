@@ -3,6 +3,7 @@ package com.nowcoder.controller;
 import com.nowcoder.dao.CommentDAO;
 import com.nowcoder.model.*;
 import com.nowcoder.service.CommentService;
+import com.nowcoder.service.LikeService;
 import com.nowcoder.service.QuestionService;
 import com.nowcoder.service.UserService;
 import com.nowcoder.util.WendaUtil;
@@ -37,6 +38,9 @@ public class QuestionController {
     @Autowired
     CommentService commentService;
 
+    @Autowired
+    LikeService likeService;
+
     @RequestMapping(value = "/question/add", method = RequestMethod.POST)
     @ResponseBody
     public String addQuestion(@RequestParam("title") String title,
@@ -66,9 +70,9 @@ public class QuestionController {
     @RequestMapping(path = {"/question/{qid}"}, method = {RequestMethod.GET})
     public String questionDetail(Model model,@PathVariable("qid") int qid){
         Question question = questionService.getQusetion(qid);
-        User user = userService.getUser(question.getUserId());
+       // User user = userService.getUser(question.getUserId());
         model.addAttribute("question", question);
-        model.addAttribute("user", user);
+       // model.addAttribute("user", user);
 
         List<Comment> commentList = commentService.getCommentByEntity(qid, EntityType.ENTITY_QUESTION);
         List<ViewObject> comments = new ArrayList<ViewObject>();
@@ -76,7 +80,13 @@ public class QuestionController {
         for(Comment comment : commentList){
             ViewObject vo = new ViewObject();
             vo.set("comment", comment);
-            vo.set("user", user);
+            vo.set("user", userService.getUser(comment.getUserId()));
+            if(hostHolder.getUser() == null){
+                vo.set("liked", 0);
+            }else{
+                vo.set("liked", likeService.getLikeStatus(hostHolder.getUser().getId(), EntityType.ENTITY_COMMENT, comment.getId()));
+            }
+            vo.set("likeCount", likeService.getLikeCount( EntityType.ENTITY_COMMENT, comment.getId()));
             comments.add(vo);
         }
 
