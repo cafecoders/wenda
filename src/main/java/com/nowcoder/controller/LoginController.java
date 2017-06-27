@@ -1,6 +1,11 @@
 package com.nowcoder.controller;
 
 import com.ctc.wstx.util.StringUtil;
+import com.nowcoder.async.EventHandler;
+import com.nowcoder.async.EventModel;
+import com.nowcoder.async.EventProducer;
+import com.nowcoder.async.EventType;
+import com.nowcoder.async.handler.LoginExceptionHandler;
 import com.nowcoder.service.UserService;
 import org.apache.commons.lang.StringUtils;
 import org.apache.zookeeper.Login;
@@ -27,6 +32,10 @@ public class LoginController {
 
     @Autowired
     UserService userService;
+    @Autowired
+    LoginExceptionHandler loginExceptionHandler;
+    @Autowired
+    EventProducer eventProducer;
 
            @RequestMapping(path = {"/reg"}, method = {RequestMethod.POST})
         public String register(Model model,
@@ -66,6 +75,11 @@ public class LoginController {
                 Cookie cookie = new Cookie("ticket", map.get("ticket"));
                 cookie.setPath("/");
                 response.addCookie(cookie);
+
+                eventProducer.fireEvent(new EventModel(EventType.LOGIN)
+                        .setExt("username", username).setExt("email", "1016760019@qq.com")
+                       );
+
                 if(StringUtils.isNotBlank(next))
                     return "redirect:" + next;
                 return "redirect:/";
