@@ -19,7 +19,7 @@ public class CommentService {
     @Autowired
     SensitiveService sensitiveService;
 
-    public List<Comment> getCommentByEntity(int entityId, int entityType){
+    public List<Comment> getCommentsByEntity(int entityId, int entityType){
         return commentDAO.selectComment(entityId, entityType);
     }
 

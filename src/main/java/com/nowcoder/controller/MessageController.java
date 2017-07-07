@@ -77,7 +77,7 @@ public class MessageController {
         List<ViewObject> conversations = new ArrayList<ViewObject>();
         for(Message message : messageList){
             ViewObject conversation = new ViewObject();
-            conversation.set("conversation", message);
+            conversation.set("message", message);
             int targetId = localUserId == message.getFromId() ? message.getToId() : message.getFromId();
             conversation.set("user", userService.getUser(targetId));
             conversation.set("unread", messageService.getConversationUnread(localUserId, message.getConversationId()));
@@ -98,10 +98,12 @@ public class MessageController {
                 vo.set("user", userService.getUser(message.getFromId()));
                 messages.add(vo);
             }
-            model.addAttribute("messages", messages);
+            model.addAttribute("conversations", messages);
         }catch(Exception e){
             logger.error("获取详情失败！" + e.getMessage());
         }
         return "letterDetail";
     }
+
+
 }

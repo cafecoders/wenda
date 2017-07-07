@@ -122,7 +122,7 @@ public class FollowController {
         }else{
             model.addAttribute("followers", getUsersInfo(0, followerIds));
         }
-        model.addAttribute("followersCount", followService.getFollowerCount(EntityType.ENTITY_USER, userId));
+        model.addAttribute("followerCount", followService.getFollowerCount(EntityType.ENTITY_USER, userId));
         model.addAttribute("curUser", userService.getUser(userId));
 
         return "followers";
@@ -138,32 +138,29 @@ public class FollowController {
             model.addAttribute("followees", getUsersInfo(0, followeeIds));
         }
         model.addAttribute("followeeCount", followService.getFolloweeCount(userId, EntityType.ENTITY_USER));
-        model.addAttribute("followerCount", followService.getFollowerCount(EntityType.ENTITY_USER, userId));
-
         model.addAttribute("curUser", userService.getUser(userId));
         return "followees";
     }
 
-    private List<ViewObject> getUsersInfo(int localUserId, List<Integer> userIds){
+    private List<ViewObject> getUsersInfo(int localUserId, List<Integer> userIds) {
         List<ViewObject> userInfos = new ArrayList<ViewObject>();
-        for(Integer uid : userIds){
+        for (Integer uid : userIds) {
             User user = userService.getUser(uid);
-            if(user == null){
+            if (user == null) {
                 continue;
             }
             ViewObject vo = new ViewObject();
             vo.set("user", user);
             vo.set("commentCount", commentService.getUserCommentCount(uid));
-            vo.set("followers", followService.getFollowerCount(EntityType.ENTITY_USER, uid));
-            vo.set("followees", followService.getFolloweeCount(uid, EntityType.ENTITY_USER));
-            if(localUserId != 0){
+            vo.set("followerCount", followService.getFollowerCount(EntityType.ENTITY_USER, uid));
+            vo.set("followeeCount", followService.getFolloweeCount(uid, EntityType.ENTITY_USER));
+            if (localUserId != 0) {
                 vo.set("followed", followService.isFollower(localUserId, EntityType.ENTITY_USER, uid));
-            }else{
+            } else {
                 vo.set("followed", false);
             }
             userInfos.add(vo);
         }
-
         return userInfos;
     }
 
