@@ -2,10 +2,7 @@ package com.nowcoder.controller;
 
 import com.nowcoder.dao.CommentDAO;
 import com.nowcoder.model.*;
-import com.nowcoder.service.CommentService;
-import com.nowcoder.service.LikeService;
-import com.nowcoder.service.QuestionService;
-import com.nowcoder.service.UserService;
+import com.nowcoder.service.*;
 import com.nowcoder.util.WendaUtil;
 import com.sun.xml.internal.ws.api.model.wsdl.WSDLBoundOperation;
 import org.slf4j.Logger;
@@ -15,6 +12,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
+import javax.swing.text.View;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -40,6 +38,9 @@ public class QuestionController {
 
     @Autowired
     LikeService likeService;
+
+    @Autowired
+    FollowService followService;
 
     @RequestMapping(value = "/question/add", method = RequestMethod.POST)
     @ResponseBody
@@ -91,6 +92,27 @@ public class QuestionController {
         }
 
         model.addAttribute("comments", comments);
+
+        List<ViewObject> followUsers = new ArrayList<ViewObject>();
+        List<Integer> users = followService.getFollowers(EntityType.ENTITY_QUESTION, qid, 10);
+        for(Integer userId : users){
+            ViewObject vo = new ViewObject();
+            User u = userService.getUser(userId);
+            if(u == null){
+                continue;
+            }
+            vo.set("user", u);
+            vo.set("name", u.getName());
+            vo.set("headUrl", u.getHeadUrl());
+            vo.set("id", u.getId());
+            followUsers.add(vo);
+        }
+        model.addAttribute("followUsers", followUsers);
+        if(hostHolder.getUser() != null){
+            model.addAttribute("followed", followService.isFollower(hostHolder.getUser().getId(), EntityType.ENTITY_QUESTION, qid));
+        }else{
+            model.addAttribute("followed", false);
+        }
 
         return "detail";
     }

@@ -30,7 +30,7 @@ public class LikeService {
         String likeKey = RedisKeyUtil.getLikeKey(entityType, entityId);
         jedisAdapter.srem(likeKey, String.valueOf(userId));
 
-        return  jedisAdapter.scard(disLikeKey);
+        return  jedisAdapter.scard(likeKey);
     }
 
     public int getLikeStatus(int userId, int entityType, int entityId){

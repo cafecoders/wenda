@@ -1,9 +1,9 @@
 package com.nowcoder.controller;
 
 import com.nowcoder.aspect.LogAspect;
-import com.nowcoder.model.Question;
-import com.nowcoder.model.User;
-import com.nowcoder.model.ViewObject;
+import com.nowcoder.model.*;
+import com.nowcoder.service.CommentService;
+import com.nowcoder.service.FollowService;
 import com.nowcoder.service.QuestionService;
 import com.nowcoder.service.UserService;
 import org.slf4j.Logger;
@@ -30,13 +30,32 @@ public class HomeController {
     UserService userService;
     @Autowired
     QuestionService questionService;
+    @Autowired
+    FollowService followService;
+    @Autowired
+    CommentService commentService;
+    @Autowired
+    HostHolder hostHolder;
 
 
     @RequestMapping(path = {"/user/{userId}"}, method = {RequestMethod.GET})
     public String userIndex(Model model,@PathVariable("userId") int userId){
         List<ViewObject> vos = getQuestions(userId, 0, 10);
         model.addAttribute("vos", vos);
-        return "index";
+
+        User user = userService.getUser(userId);
+        ViewObject vo = new ViewObject();
+        vo.set("user", user);
+        vo.set("followerCount", followService.getFollowerCount(EntityType.ENTITY_USER, userId));
+        vo.set("followeeCount", followService.getFolloweeCount(userId, EntityType.ENTITY_USER));
+        vo.set("commentCount", commentService.getUserCommentCount(userId));
+        if(hostHolder.getUser() != null){
+            vo.set("followed", followService.isFollower(hostHolder.getUser().getId(), EntityType.ENTITY_USER, userId));
+        }else{
+            vo.set("followed", false);
+        }
+        model.addAttribute("profileUser", vo);
+        return "profile";
     }
 
 /*
@@ -63,6 +82,7 @@ public class HomeController {
         for(Question question : questionList){
             ViewObject vo = new ViewObject();
             vo.set("question", question);
+            vo.set("followCount", followService.getFollowerCount(EntityType.ENTITY_QUESTION, question.getId()));
             vo.set("user", userService.getUser(question.getUserId()));
             vos.add(vo);
         }
