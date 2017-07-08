@@ -35,7 +35,7 @@ public class QuestionService {
         return questionDAO.getQuestionById(id);
     }
 
-    public int updateCommnetCount(int commentCount, int id){
+    public int updateCommentCount(int commentCount, int id){
         return questionDAO.updateCommentCount(commentCount, id);
     }
 }

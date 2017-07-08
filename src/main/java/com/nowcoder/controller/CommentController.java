@@ -5,8 +5,6 @@ import com.nowcoder.model.EntityType;
 import com.nowcoder.model.HostHolder;
 import com.nowcoder.service.CommentService;
 import com.nowcoder.service.QuestionService;
-import com.nowcoder.util.WendaUtil;
-import org.apache.ibatis.annotations.Param;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -47,14 +45,15 @@ public class CommentController {
         comment.setEntityType(EntityType.ENTITY_QUESTION);
         comment.setEntityId(questionId);
 
-        int count = commentService.getCommentCount(comment.getEntityId(), comment.getEntityType());
-        questionService.updateCommnetCount(count, comment.getEntityId());
 
         try{
             commentService.addComment(comment);
         }catch(Exception e){
             logger.error("增加评论失败！" + e.getMessage());
         }
+
+        int count = commentService.getCommentCount(comment.getEntityId(), comment.getEntityType());
+        questionService.updateCommentCount(count, comment.getEntityId());
 
         return "redirect:/question/" + questionId;
     }
