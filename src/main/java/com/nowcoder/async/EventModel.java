@@ -7,11 +7,11 @@ import java.util.Map;
  * Created by missinghigh on 2017/6/27.
  */
 public class EventModel {
-    private EventType type;
-    private int actorId;
-    private int entityType;
-    private int entityId;
-    private int entityOwnerId;
+    private EventType type;//事件类型 LIKE COMMENT MAIL LOGIN FOLLOW UNFOLLOW ADD_QUESTION
+    private int actorId;//事件产生者的Id
+    private int entityType;//实体类型 COMMENT QUESTION USER
+    private int entityId;//实体Id
+    private int entityOwnerId;//实体拥有者
 
     private Map<String, String> exts = new HashMap<String, String>();
 
