@@ -62,7 +62,7 @@ public class FeedHandler implements EventHandler {
 
     @Override
     public List<EventType> getSupportEventTypes() {
-        return Arrays.asList(new EventType[]{EventType.FOLLOW, EventType.COMMENT});
+        return Arrays.asList(new EventType[]{EventType.FOLLOW, EventType.COMMENT, EventType.LIKE});
     }
 
     private String buildFeedData(EventModel eventModel){

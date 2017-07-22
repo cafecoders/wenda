@@ -1,0 +1,151 @@
+2017-07-22 02:02:51.719 INFO  (main) [   ] o.e.j.s.Server jetty-9.3.14.v20161028
+2017-07-22 02:02:52.366 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter  ___      _       Welcome to Apache Solr? version 6.6.0
+2017-07-22 02:02:52.366 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter / __| ___| |_ _   Starting in standalone mode on port 8983
+2017-07-22 02:02:52.367 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter \__ \/ _ \ | '_|  Install dir: C:\Users\Administrator\Downloads\solr-6.6.0\solr-6.6.0
+2017-07-22 02:02:52.380 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter |___/\___/_|_|    Start time: 2017-07-22T02:02:52.368Z
+2017-07-22 02:02:52.380 INFO  (main) [   ] o.a.s.s.StartupLoggingUtils Property solr.log.muteconsole given. Muting ConsoleAppender named CONSOLE
+2017-07-22 02:02:52.395 INFO  (main) [   ] o.a.s.c.SolrResourceLoader Using system property solr.solr.home: C:\Users\Administrator\Downloads\solr-6.6.0\solr-6.6.0\server\solr
+2017-07-22 02:02:52.400 INFO  (main) [   ] o.a.s.c.SolrXmlConfig Loading container configuration from C:\Users\Administrator\Downloads\solr-6.6.0\solr-6.6.0\server\solr\solr.xml
+2017-07-22 02:02:52.755 INFO  (main) [   ] o.a.s.u.UpdateShardHandler Creating UpdateShardHandler HTTP client with params: socketTimeout=600000&connTimeout=60000&retry=true
+2017-07-22 02:02:52.937 INFO  (main) [   ] o.a.s.c.CorePropertiesLocator Found 1 core definitions underneath C:\Users\Administrator\Downloads\solr-6.6.0\solr-6.6.0\server\solr
+2017-07-22 02:02:52.939 INFO  (main) [   ] o.a.s.c.CorePropertiesLocator Cores are: [wenda]
+2017-07-22 02:02:53.018 INFO  (coreLoadExecutor-6-thread-1) [   x:wenda] o.a.s.c.SolrResourceLoader [wenda] Added 54 libs to classloader, from paths: [/C:/Users/Administrator/Downloads/solr-6.6.0/solr-6.6.0/contrib/clustering/lib, /C:/Users/Administrator/Downloads/solr-6.6.0/solr-6.6.0/contrib/extraction/lib, /C:/Users/Administrator/Downloads/solr-6.6.0/solr-6.6.0/contrib/langid/lib, /C:/Users/Administrator/Downloads/solr-6.6.0/solr-6.6.0/contrib/velocity/lib, /C:/Users/Administrator/Downloads/solr-6.6.0/solr-6.6.0/dist, /C:/Users/Administrator/Downloads/solr-6.6.0/solr-6.6.0/ext/ikanalyzer, /C:/Users/Administrator/Downloads/solr-6.6.0/solr-6.6.0/ext/mysql]
+2017-07-22 02:02:53.218 INFO  (coreLoadExecutor-6-thread-1) [   x:wenda] o.a.s.c.SolrConfig Using Lucene MatchVersion: 6.6.0
+2017-07-22 02:02:53.283 INFO  (main) [   ] o.e.j.s.Server Started @2605ms
+2017-07-22 02:02:53.489 INFO  (coreLoadExecutor-6-thread-1) [   x:wenda] o.a.s.s.IndexSchema [wenda] Schema name=example-data-driven-schema
+2017-07-22 02:02:53.528 INFO  (qtp1654589030-14) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json} status=0 QTime=53
+2017-07-22 02:02:54.198 INFO  (coreLoadExecutor-6-thread-1) [   x:wenda] o.a.s.s.IndexSchema Loaded schema example-data-driven-schema/1.6 with uniqueid field id
+2017-07-22 02:02:54.272 INFO  (coreLoadExecutor-6-thread-1) [   x:wenda] o.a.s.c.CoreContainer Creating SolrCore 'wenda' using configuration from instancedir C:\Users\Administrator\Downloads\solr-6.6.0\solr-6.6.0\server\solr\wenda, trusted=true
+2017-07-22 02:02:54.291 INFO  (coreLoadExecutor-6-thread-1) [   x:wenda] o.a.s.c.SolrCore solr.RecoveryStrategy.Builder
+2017-07-22 02:02:54.296 INFO  (coreLoadExecutor-6-thread-1) [   x:wenda] o.a.s.c.SolrCore [[wenda] ] Opening new SolrCore at [C:\Users\Administrator\Downloads\solr-6.6.0\solr-6.6.0\server\solr\wenda], dataDir=[C:\Users\Administrator\Downloads\solr-6.6.0\solr-6.6.0\server\solr\wenda\data\]
+2017-07-22 02:02:54.345 INFO  (coreLoadExecutor-6-thread-1) [   x:wenda] o.a.s.r.XSLTResponseWriter xsltCacheLifetimeSeconds=5
+2017-07-22 02:02:54.757 INFO  (coreLoadExecutor-6-thread-1) [   x:wenda] o.a.s.u.UpdateHandler Using UpdateLog implementation: org.apache.solr.update.UpdateLog
+2017-07-22 02:02:54.758 INFO  (coreLoadExecutor-6-thread-1) [   x:wenda] o.a.s.u.UpdateLog Initializing UpdateLog: dataDir= defaultSyncLevel=FLUSH numRecordsToKeep=100 maxNumLogsToKeep=10 numVersionBuckets=65536
+2017-07-22 02:02:54.779 INFO  (coreLoadExecutor-6-thread-1) [   x:wenda] o.a.s.u.CommitTracker Hard AutoCommit: if uncommited for 15000ms; 
+2017-07-22 02:02:54.780 INFO  (coreLoadExecutor-6-thread-1) [   x:wenda] o.a.s.u.CommitTracker Soft AutoCommit: disabled
+2017-07-22 02:02:54.898 INFO  (coreLoadExecutor-6-thread-1) [   x:wenda] o.a.s.s.SolrIndexSearcher Opening [Searcher@3030c23f[wenda] main]
+2017-07-22 02:02:54.908 INFO  (coreLoadExecutor-6-thread-1) [   x:wenda] o.a.s.r.ManagedResourceStorage File-based storage initialized to use dir: C:\Users\Administrator\Downloads\solr-6.6.0\solr-6.6.0\server\solr\wenda\conf
+2017-07-22 02:02:54.957 INFO  (coreLoadExecutor-6-thread-1) [   x:wenda] o.a.s.h.c.SpellCheckComponent Initializing spell checkers
+2017-07-22 02:02:54.967 INFO  (coreLoadExecutor-6-thread-1) [   x:wenda] o.a.s.s.DirectSolrSpellChecker init: {name=default,field=_text_,classname=solr.DirectSolrSpellChecker,distanceMeasure=internal,accuracy=0.5,maxEdits=2,minPrefix=1,maxInspections=5,minQueryLength=4,maxQueryFrequency=0.01}
+2017-07-22 02:02:54.970 INFO  (coreLoadExecutor-6-thread-1) [   x:wenda] o.a.s.h.c.QueryElevationComponent Loading QueryElevation from: C:\Users\Administrator\Downloads\solr-6.6.0\solr-6.6.0\server\solr\wenda\conf\elevate.xml
+2017-07-22 02:02:54.984 INFO  (coreLoadExecutor-6-thread-1) [   x:wenda] o.a.s.h.ReplicationHandler Commits will be reserved for  10000
+2017-07-22 02:02:55.033 INFO  (searcherExecutor-7-thread-1-processing-x:wenda) [   x:wenda] o.a.s.c.QuerySenderListener QuerySenderListener sending requests to Searcher@3030c23f[wenda] main{ExitableDirectoryReader(UninvertingDirectoryReader(Uninverting(_0(6.6.0):C1)))}
+2017-07-22 02:02:55.034 INFO  (searcherExecutor-7-thread-1-processing-x:wenda) [   x:wenda] o.a.s.c.QuerySenderListener QuerySenderListener done.
+2017-07-22 02:02:55.034 INFO  (searcherExecutor-7-thread-1-processing-x:wenda) [   x:wenda] o.a.s.h.c.SpellCheckComponent Loading spell index for spellchecker: default
+2017-07-22 02:02:55.036 INFO  (searcherExecutor-7-thread-1-processing-x:wenda) [   x:wenda] o.a.s.c.SolrCore [wenda] Registered new searcher Searcher@3030c23f[wenda] main{ExitableDirectoryReader(UninvertingDirectoryReader(Uninverting(_0(6.6.0):C1)))}
+2017-07-22 02:02:56.981 INFO  (qtp1654589030-20) [   ] o.a.s.c.TransientSolrCoreCacheDefault Allocating transient cache for 2147483647 transient cores
+2017-07-22 02:02:57.706 INFO  (qtp1654589030-21) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1500688977545} status=0 QTime=1
+2017-07-22 02:02:57.712 INFO  (qtp1654589030-15) [   x:wenda] o.a.s.c.S.Request [wenda]  webapp=/solr path=/admin/mbeans params={cat=QUERY&wt=json&_=1500688977687} status=0 QTime=3
+2017-07-22 02:02:57.720 INFO  (qtp1654589030-19) [   x:wenda] o.a.s.c.S.Request [wenda]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=show-config&_=1500688977688} status=0 QTime=6
+2017-07-22 02:02:57.730 INFO  (qtp1654589030-22) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1500688977546} status=0 QTime=23
+2017-07-22 02:02:57.971 INFO  (qtp1654589030-13) [   x:wenda] o.a.s.c.S.Request [wenda]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status&_=1500688977688} status=0 QTime=0
+2017-07-22 02:04:25.601 INFO  (qtp1654589030-20) [   x:wenda] o.a.s.h.d.DataImporter Loading DIH Configuration: data-config.xml
+2017-07-22 02:04:25.617 INFO  (qtp1654589030-20) [   x:wenda] o.a.s.h.d.c.DIHConfiguration id is a required field in SolrSchema . But not found in DataConfig
+2017-07-22 02:04:25.617 INFO  (qtp1654589030-20) [   x:wenda] o.a.s.h.d.DataImporter Data Configuration loaded successfully
+2017-07-22 02:04:25.629 INFO  (Thread-14) [   x:wenda] o.a.s.h.d.DataImporter Starting Full Import
+2017-07-22 02:04:25.630 INFO  (qtp1654589030-20) [   x:wenda] o.a.s.c.S.Request [wenda]  webapp=/solr path=/dataimport params={core=wenda&optimize=false&indent=on&commit=true&name=dataimport&clean=true&wt=json&command=full-import&entity=question&_=1500688977688&verbose=false} status=0 QTime=30
+2017-07-22 02:04:25.636 INFO  (qtp1654589030-14) [   x:wenda] o.a.s.c.S.Request [wenda]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status&_=1500688977688} status=0 QTime=0
+2017-07-22 02:04:25.648 WARN  (Thread-14) [   x:wenda] o.a.s.h.d.SimplePropertiesWriter Unable to read: dataimport.properties
+2017-07-22 02:04:25.723 INFO  (Thread-14) [   x:wenda] o.a.s.s.SolrIndexSearcher Opening [Searcher@79c3543c[wenda] realtime]
+2017-07-22 02:04:25.769 INFO  (Thread-14) [   x:wenda] o.a.s.h.d.JdbcDataSource Creating a connection for entity question with URL: jdbc:mysql://localhost/wenda
+2017-07-22 02:04:26.042 INFO  (Thread-14) [   x:wenda] o.a.s.h.d.JdbcDataSource Time taken for getConnection(): 273
+2017-07-22 02:04:26.480 INFO  (Thread-14) [   x:wenda] o.a.s.h.d.DocBuilder Import completed successfully
+2017-07-22 02:04:26.481 INFO  (Thread-14) [   x:wenda] o.a.s.u.DirectUpdateHandler2 start commit{,optimize=false,openSearcher=true,waitSearcher=true,expungeDeletes=false,softCommit=false,prepareCommit=false}
+2017-07-22 02:04:26.482 INFO  (Thread-14) [   x:wenda] o.a.s.u.SolrIndexWriter Calling setCommitData with IW:org.apache.solr.update.SolrIndexWriter@2a021062
+2017-07-22 02:04:26.646 INFO  (Thread-14) [   x:wenda] o.a.s.s.SolrIndexSearcher Opening [Searcher@747737e3[wenda] main]
+2017-07-22 02:04:26.651 INFO  (Thread-14) [   x:wenda] o.a.s.u.DirectUpdateHandler2 end_commit_flush
+2017-07-22 02:04:26.651 INFO  (searcherExecutor-7-thread-1-processing-x:wenda) [   x:wenda] o.a.s.c.QuerySenderListener QuerySenderListener sending requests to Searcher@747737e3[wenda] main{ExitableDirectoryReader(UninvertingDirectoryReader(Uninverting(_1(6.6.0):C12)))}
+2017-07-22 02:04:26.651 INFO  (searcherExecutor-7-thread-1-processing-x:wenda) [   x:wenda] o.a.s.c.QuerySenderListener QuerySenderListener done.
+2017-07-22 02:04:26.652 INFO  (searcherExecutor-7-thread-1-processing-x:wenda) [   x:wenda] o.a.s.c.SolrCore [wenda] Registered new searcher Searcher@747737e3[wenda] main{ExitableDirectoryReader(UninvertingDirectoryReader(Uninverting(_1(6.6.0):C12)))}
+2017-07-22 02:04:26.663 WARN  (Thread-14) [   x:wenda] o.a.s.h.d.SimplePropertiesWriter Unable to read: dataimport.properties
+2017-07-22 02:04:26.664 INFO  (Thread-14) [   x:wenda] o.a.s.h.d.SimplePropertiesWriter Wrote last indexed time to dataimport.properties
+2017-07-22 02:04:26.668 INFO  (Thread-14) [   x:wenda] o.a.s.h.d.DocBuilder Time taken = 0:0:1.20
+2017-07-22 02:04:26.668 INFO  (Thread-14) [   x:wenda] o.a.s.u.p.LogUpdateProcessorFactory [wenda]  webapp=/solr path=/dataimport params={core=wenda&optimize=false&indent=on&commit=true&name=dataimport&clean=true&wt=json&command=full-import&entity=question&_=1500688977688&verbose=false} status=0 QTime=30{deleteByQuery=*:* (-1573586537738665984),add=[1 (1573586538121396224), 2 (1573586538537680896), 3 (1573586538540826624), 4 (1573586538543972352), 5 (1573586538546069504), 6 (1573586538556555264), 7 (1573586538558652416), 8 (1573586538561798144), 9 (1573586538563895296), 10 (1573586538568089600), ... (12 adds)],commit=} 0 1069
+2017-07-22 02:05:20.409 INFO  (qtp1654589030-19) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1500688977545} status=0 QTime=0
+2017-07-22 02:05:20.416 INFO  (qtp1654589030-19) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/logging params={wt=json&_=1500689120405&since=0} status=0 QTime=1
+2017-07-22 02:05:20.436 INFO  (qtp1654589030-18) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1500688977546} status=0 QTime=24
+2017-07-22 02:05:30.410 INFO  (qtp1654589030-19) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/logging params={wt=json&_=1500689120405&since=0} status=0 QTime=0
+2017-07-22 02:05:40.602 INFO  (qtp1654589030-17) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/logging params={wt=json&_=1500689120405&since=0} status=0 QTime=0
+2017-07-22 02:05:51.600 INFO  (qtp1654589030-14) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/logging params={wt=json&_=1500689120405&since=0} status=0 QTime=0
+2017-07-22 02:06:02.601 INFO  (qtp1654589030-21) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/logging params={wt=json&_=1500689120405&since=0} status=0 QTime=0
+2017-07-22 02:06:13.600 INFO  (qtp1654589030-19) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/logging params={wt=json&_=1500689120405&since=0} status=0 QTime=0
+2017-07-22 02:06:24.602 INFO  (qtp1654589030-22) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/logging params={wt=json&_=1500689120405&since=0} status=0 QTime=0
+2017-07-22 02:06:35.606 INFO  (qtp1654589030-14) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/logging params={wt=json&_=1500689120405&since=0} status=0 QTime=0
+2017-07-22 02:06:46.600 INFO  (qtp1654589030-21) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/logging params={wt=json&_=1500689120405&since=0} status=0 QTime=0
+2017-07-22 02:06:57.601 INFO  (qtp1654589030-20) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/logging params={wt=json&_=1500689120405&since=0} status=0 QTime=0
+2017-07-22 02:07:08.600 INFO  (qtp1654589030-15) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/logging params={wt=json&_=1500689120405&since=0} status=0 QTime=0
+2017-07-22 02:07:18.607 INFO  (qtp1654589030-17) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/logging params={wt=json&_=1500689120405&since=0} status=0 QTime=0
+2017-07-22 02:07:29.604 INFO  (qtp1654589030-13) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/logging params={wt=json&_=1500689120405&since=0} status=0 QTime=0
+2017-07-22 02:07:40.605 INFO  (qtp1654589030-22) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/logging params={wt=json&_=1500689120405&since=0} status=0 QTime=0
+2017-07-22 02:07:51.599 INFO  (qtp1654589030-14) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/logging params={wt=json&_=1500689120405&since=0} status=0 QTime=0
+2017-07-22 02:08:02.603 INFO  (qtp1654589030-21) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/logging params={wt=json&_=1500689120405&since=0} status=0 QTime=0
+2017-07-22 02:08:13.600 INFO  (qtp1654589030-20) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/logging params={wt=json&_=1500689120405&since=0} status=0 QTime=0
+2017-07-22 02:08:23.606 INFO  (qtp1654589030-15) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/logging params={wt=json&_=1500689120405&since=0} status=0 QTime=0
+2017-07-22 02:08:25.026 INFO  (qtp1654589030-19) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1500688977545} status=0 QTime=0
+2017-07-22 02:08:25.052 INFO  (qtp1654589030-14) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1500688977546} status=0 QTime=22
+2017-07-22 02:08:25.076 INFO  (qtp1654589030-21) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1500688977546} status=0 QTime=19
+2017-07-22 02:08:27.993 INFO  (qtp1654589030-20) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1500688977545} status=0 QTime=0
+2017-07-22 02:08:28.001 INFO  (qtp1654589030-18) [   x:wenda] o.a.s.c.S.Request [wenda]  webapp=/solr path=/admin/luke params={numTerms=0&show=index&wt=json&_=1500689307986} status=0 QTime=2
+2017-07-22 02:08:28.006 INFO  (qtp1654589030-20) [   x:wenda] o.a.s.c.S.Request [wenda]  webapp=/solr path=/replication params={wt=json&command=details&_=1500689307986} status=0 QTime=4
+2017-07-22 02:08:28.018 INFO  (qtp1654589030-15) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1500688977546} status=0 QTime=23
+2017-07-22 02:08:28.020 INFO  (qtp1654589030-13) [   x:wenda] o.a.s.c.S.Request [wenda]  webapp=/solr path=/admin/ping params={action=status&wt=json&_=1500688977547&ts=1500688977547} status=503 QTime=4
+2017-07-22 02:08:28.051 INFO  (qtp1654589030-17) [   x:wenda] o.a.s.c.S.Request [wenda]  webapp=/solr path=/admin/system params={wt=json&_=1500689307986} status=0 QTime=41
+2017-07-22 02:08:33.751 INFO  (qtp1654589030-19) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1500688977545} status=0 QTime=0
+2017-07-22 02:08:33.758 INFO  (qtp1654589030-19) [   x:wenda] o.a.s.c.S.Request [wenda]  webapp=/solr path=/admin/mbeans params={cat=QUERY&wt=json&_=1500688977687} status=0 QTime=3
+2017-07-22 02:08:33.778 INFO  (qtp1654589030-21) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1500688977546} status=0 QTime=25
+2017-07-22 02:08:33.821 INFO  (qtp1654589030-19) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1500688977545} status=0 QTime=0
+2017-07-22 02:08:33.825 INFO  (qtp1654589030-22) [   x:wenda] o.a.s.c.S.Request [wenda]  webapp=/solr path=/admin/mbeans params={cat=QUERY&wt=json&_=1500688977687} status=0 QTime=0
+2017-07-22 02:08:33.830 INFO  (qtp1654589030-20) [   x:wenda] o.a.s.c.S.Request [wenda]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=show-config&_=1500688977688} status=0 QTime=0
+2017-07-22 02:08:33.843 INFO  (qtp1654589030-13) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1500688977546} status=0 QTime=22
+2017-07-22 02:08:33.861 INFO  (qtp1654589030-20) [   x:wenda] o.a.s.c.S.Request [wenda]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status&_=1500688977688} status=0 QTime=0
+2017-07-22 02:09:33.845 INFO  (qtp1654589030-13) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1500688977545} status=0 QTime=0
+2017-07-22 02:09:33.869 INFO  (qtp1654589030-14) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1500688977546} status=0 QTime=21
+2017-07-22 02:09:41.182 INFO  (qtp1654589030-22) [   x:wenda] o.a.s.c.S.Request [wenda]  webapp=/solr path=/select params={q=很多&indent=on&wt=json&_=1500689373806} hits=7 status=0 QTime=26
+2017-07-22 02:10:17.087 INFO  (qtp1654589030-17) [   x:wenda] o.a.s.c.S.Request [wenda]  webapp=/solr path=/select params={q=很多&df=question_title&indent=on&wt=json&_=1500689373806} hits=0 status=0 QTime=5
+2017-07-22 02:10:22.838 INFO  (qtp1654589030-19) [   x:wenda] o.a.s.c.S.Request [wenda]  webapp=/solr path=/select params={q=很多&df=question_content&indent=on&wt=json&_=1500689373806} hits=1 status=0 QTime=3
+2017-07-22 02:10:37.962 INFO  (qtp1654589030-15) [   x:wenda] o.a.s.c.S.Request [wenda]  webapp=/solr path=/select params={q=很多&indent=on&wt=json&_=1500689373806} hits=7 status=0 QTime=0
+2017-07-22 02:11:47.421 INFO  (qtp1654589030-19) [   x:wenda] o.a.s.c.S.Request [wenda]  webapp=/solr path=/select params={q=很多&hl=on&hl.simple.post=</em>&indent=on&wt=json&hl.simple.pre=<em>&_=1500689373806} hits=7 status=0 QTime=3
+2017-07-22 02:12:09.983 INFO  (qtp1654589030-15) [   x:wenda] o.a.s.c.S.Request [wenda]  webapp=/solr path=/select params={q=很多&df=question_content&hl=on&hl.simple.post=</em>&indent=on&wt=json&hl.simple.pre=<em>&_=1500689373806} hits=1 status=0 QTime=38
+2017-07-22 02:12:50.143 INFO  (qtp1654589030-20) [   x:wenda] o.a.s.c.S.Request [wenda]  webapp=/solr path=/select params={q=是&hl=on&hl.simple.post=</em>&indent=on&wt=json&hl.simple.pre=<em>&_=1500689373806} hits=10 status=0 QTime=5
+2017-07-22 02:13:16.243 INFO  (qtp1654589030-19) [   x:wenda] o.a.s.c.S.Request [wenda]  webapp=/solr path=/select params={q=是&df=question_title&hl=on&hl.simple.post=</em>&indent=on&wt=json&hl.simple.pre=<em>&_=1500689373806} hits=0 status=0 QTime=1
+2017-07-22 02:13:38.892 INFO  (qtp1654589030-14) [   x:wenda] o.a.s.c.S.Request [wenda]  webapp=/solr path=/select params={q=是&df=question_content&hl=on&hl.simple.post=</em>&indent=on&wt=json&hl.simple.pre=<em>&_=1500689373806} hits=0 status=0 QTime=3
+2017-07-22 02:13:53.052 INFO  (qtp1654589030-18) [   x:wenda] o.a.s.c.S.Request [wenda]  webapp=/solr path=/select params={q=是&df=question_content&hl=on&hl.simple.post=</em>&indent=on&wt=json&hl.simple.pre=<em>&_=1500689373806} hits=0 status=0 QTime=3
+2017-07-22 02:14:03.790 INFO  (qtp1654589030-14) [   x:wenda] o.a.s.c.S.Request [wenda]  webapp=/solr path=/select params={q=奥尼尔&df=question_content&hl=on&hl.simple.post=</em>&indent=on&wt=json&hl.simple.pre=<em>&_=1500689373806} hits=3 status=0 QTime=13
+2017-07-22 02:14:35.899 INFO  (qtp1654589030-13) [   x:wenda] o.a.s.c.S.Request [wenda]  webapp=/solr path=/select params={q=奥尼尔&df=question_content&hl=on&hl.simple.post=</em>&indent=on&wt=json&debugQuery=on&hl.simple.pre=<em>&_=1500689373806} hits=3 status=0 QTime=18
+2017-07-22 02:15:14.438 INFO  (qtp1654589030-19) [   x:wenda] o.a.s.c.S.Request [wenda]  webapp=/solr path=/select params={q=奥尼尔&df=question_content&hl=on&hl.simple.post=</em>&indent=on&wt=json&debugQuery=on&hl.simple.pre=<em>&_=1500689373806} hits=3 status=0 QTime=14
+2017-07-22 02:15:17.028 INFO  (qtp1654589030-15) [   x:wenda] o.a.s.c.S.Request [wenda]  webapp=/solr path=/select params={q=奥尼尔&df=question_content&hl=on&hl.simple.post=</em>&indent=on&wt=json&debugQuery=on&hl.simple.pre=<em>&_=1500689373806} hits=3 status=0 QTime=12
+2017-07-22 02:15:18.271 INFO  (qtp1654589030-18) [   x:wenda] o.a.s.c.S.Request [wenda]  webapp=/solr path=/select params={q=奥尼尔&df=question_content&hl=on&hl.simple.post=</em>&indent=on&wt=json&debugQuery=on&hl.simple.pre=<em>&_=1500689373806} hits=3 status=0 QTime=14
+2017-07-22 02:15:20.842 INFO  (qtp1654589030-14) [   x:wenda] o.a.s.c.S.Request [wenda]  webapp=/solr path=/select params={q=奥尼尔&df=question_content&hl=on&hl.simple.post=</em>&indent=on&wt=json&debugQuery=on&hl.simple.pre=<em>&_=1500689373806} hits=3 status=0 QTime=113
+2017-07-22 02:15:27.983 INFO  (qtp1654589030-13) [   x:wenda] o.a.s.c.S.Request [wenda]  webapp=/solr path=/select params={q=奥尼尔&hl=on&hl.simple.post=</em>&indent=on&wt=json&debugQuery=on&hl.simple.pre=<em>&_=1500689373806} hits=6 status=0 QTime=6
+2017-07-22 02:15:40.706 INFO  (qtp1654589030-18) [   x:wenda] o.a.s.c.S.Request [wenda]  webapp=/solr path=/select params={q=奥尼尔&hl=on&hl.simple.post=</em>&indent=on&wt=json&hl.simple.pre=<em>&_=1500689373806} hits=6 status=0 QTime=0
+2017-07-22 02:15:55.393 INFO  (qtp1654589030-14) [   x:wenda] o.a.s.c.S.Request [wenda]  webapp=/solr path=/select params={q=奥尼尔&hl=on&hl.simple.post=</em>&indent=on&wt=json&hl.simple.pre=<em>&_=1500689373806} hits=6 status=0 QTime=0
+2017-07-22 02:15:57.337 INFO  (qtp1654589030-18) [   x:wenda] o.a.s.c.S.Request [wenda]  webapp=/solr path=/select params={q=奥尼尔&hl=on&hl.simple.post=</em>&indent=on&wt=json&hl.simple.pre=<em>&_=1500689373806} hits=6 status=0 QTime=0
+2017-07-22 02:17:01.687 INFO  (qtp1654589030-15) [   x:wenda] o.a.s.c.S.Request [wenda]  webapp=/solr path=/select params={q=分钟&df=question_content&hl=on&hl.simple.post=</em>&indent=on&wt=json&hl.simple.pre=<em>&_=1500689373806} hits=3 status=0 QTime=7
+2017-07-22 03:20:24.764 INFO  (qtp1654589030-22) [   x:wenda] o.a.s.c.S.Request [wenda]  webapp=/solr path=/select params={q=t&hl=true&hl.simple.post=</em&start=0&hl.fl=question_title,question_content&rows=10&wt=javabin&version=2&hl.simple.pre=<em>} hits=1 status=0 QTime=8
+2017-07-22 03:20:40.033 INFO  (qtp1654589030-20) [   x:wenda] o.a.s.c.S.Request [wenda]  webapp=/solr path=/select params={q=牛&hl=true&hl.simple.post=</em&start=0&hl.fl=question_title,question_content&rows=10&wt=javabin&version=2&hl.simple.pre=<em>} hits=1 status=0 QTime=6
+2017-07-22 03:22:09.117 INFO  (qtp1654589030-19) [   x:wenda] o.a.s.c.S.Request [wenda]  webapp=/solr path=/select params={q=牛&hl=true&hl.simple.post=</em&start=0&hl.fl=question_title,question_content&rows=10&wt=javabin&version=2&hl.simple.pre=<em>} hits=1 status=0 QTime=2
+2017-07-22 03:22:26.653 INFO  (qtp1654589030-22) [   x:wenda] o.a.s.c.S.Request [wenda]  webapp=/solr path=/select params={q=是&hl=true&hl.simple.post=</em&start=0&hl.fl=question_title,question_content&rows=10&wt=javabin&version=2&hl.simple.pre=<em>} hits=10 status=0 QTime=27
+2017-07-22 03:23:55.055 INFO  (qtp1654589030-20) [   x:wenda] o.a.s.c.S.Request [wenda]  webapp=/solr path=/select params={q=是&hl=true&hl.simple.post=</em>&start=0&hl.fl=question_title,question_content&rows=10&wt=javabin&version=2&hl.simple.pre=<em>} hits=10 status=0 QTime=17
+2017-07-22 03:24:13.032 INFO  (qtp1654589030-22) [   x:wenda] o.a.s.c.S.Request [wenda]  webapp=/solr path=/select params={q=问&hl=true&hl.simple.post=</em>&start=0&hl.fl=question_title,question_content&rows=10&wt=javabin&version=2&hl.simple.pre=<em>} hits=2 status=0 QTime=4
+2017-07-22 03:25:42.629 INFO  (qtp1654589030-22) [   x:wenda] o.a.s.c.S.Request [wenda]  webapp=/solr path=/select params={q=问&hl=true&hl.simple.post=</em>&start=0&hl.fl=question_title,question_content&rows=10&wt=javabin&version=2&hl.simple.pre=<em>} hits=2 status=0 QTime=5
+2017-07-22 03:25:45.692 INFO  (qtp1654589030-21) [   x:wenda] o.a.s.c.S.Request [wenda]  webapp=/solr path=/select params={q=问&hl=true&hl.simple.post=</em>&start=0&hl.fl=question_title,question_content&rows=10&wt=javabin&version=2&hl.simple.pre=<em>} hits=2 status=0 QTime=7
+2017-07-22 03:27:22.499 INFO  (qtp1654589030-18) [   x:wenda] o.a.s.c.S.Request [wenda]  webapp=/solr path=/select params={q=问&hl=true&hl.simple.post=</em>&start=0&hl.fl=question_title,question_content&rows=10&wt=javabin&version=2&hl.simple.pre=<em>} hits=2 status=0 QTime=3
+2017-07-22 03:27:55.192 INFO  (qtp1654589030-21) [   x:wenda] o.a.s.c.S.Request [wenda]  webapp=/solr path=/select params={q=问&hl=true&hl.simple.post=</em>&start=0&hl.fl=question_title,question_content&rows=10&wt=javabin&version=2&hl.simple.pre=<em>} hits=2 status=0 QTime=4
+2017-07-22 03:38:40.286 INFO  (qtp1654589030-17) [   x:wenda] o.a.s.c.S.Request [wenda]  webapp=/solr path=/select params={q=问&hl=true&hl.simple.post=</em>&start=0&hl.fl=question_title,question_content&rows=10&wt=javabin&version=2&hl.simple.pre=<em>} hits=2 status=0 QTime=8
+2017-07-22 03:38:49.276 INFO  (qtp1654589030-18) [   x:wenda] o.a.s.c.S.Request [wenda]  webapp=/solr path=/select params={q=问&hl=true&hl.simple.post=</em>&start=0&hl.fl=question_title,question_content&rows=10&wt=javabin&version=2&hl.simple.pre=<em>} hits=2 status=0 QTime=3
+2017-07-22 03:45:14.014 INFO  (qtp1654589030-14) [   x:wenda] o.a.s.c.S.Request [wenda]  webapp=/solr path=/select params={q=问&hl=true&hl.simple.post=</font>&start=0&hl.fl=question_title,question_content&rows=10&wt=javabin&version=2&hl.simple.pre=<font+color%3D'red'>} hits=2 status=0 QTime=4
+2017-07-22 03:48:41.082 INFO  (qtp1654589030-18) [   x:wenda] o.a.s.c.S.Request [wenda]  webapp=/solr path=/select params={q=问&hl=true&hl.simple.post=</font>&start=0&hl.fl=question_title,question_content&rows=10&wt=javabin&version=2&hl.simple.pre=<font+color%3Dred>} hits=2 status=0 QTime=2
+2017-07-22 05:33:00.970 INFO  (qtp1654589030-22) [   x:wenda] o.a.s.c.S.Request [wenda]  webapp=/solr path=/select params={q=问&hl=true&hl.simple.post=</font>&start=0&hl.fl=question_title,question_content&rows=10&wt=javabin&version=2&hl.simple.pre=<font+color%3Dred>} hits=2 status=0 QTime=4
+2017-07-22 05:33:33.879 INFO  (qtp1654589030-17) [   x:wenda] o.a.s.c.S.Request [wenda]  webapp=/solr path=/select params={q=欧文&hl=true&hl.simple.post=</font>&start=0&hl.fl=question_title,question_content&rows=10&wt=javabin&version=2&hl.simple.pre=<font+color%3Dred>} hits=2 status=0 QTime=6
+2017-07-22 05:34:00.193 INFO  (qtp1654589030-14) [   x:wenda] o.a.s.u.p.LogUpdateProcessorFactory [wenda]  webapp=/solr path=/update params={wt=javabin&version=2}{add=[13 (1573599722928603136)]} 0 151
+2017-07-22 05:34:01.193 INFO  (commitScheduler-11-thread-1) [   x:wenda] o.a.s.u.DirectUpdateHandler2 start commit{,optimize=false,openSearcher=true,waitSearcher=true,expungeDeletes=false,softCommit=true,prepareCommit=false}
+2017-07-22 05:34:01.206 INFO  (commitScheduler-11-thread-1) [   x:wenda] o.a.s.s.SolrIndexSearcher Opening [Searcher@20b792e9[wenda] main]
+2017-07-22 05:34:01.207 INFO  (commitScheduler-11-thread-1) [   x:wenda] o.a.s.u.DirectUpdateHandler2 end_commit_flush
+2017-07-22 05:34:01.207 INFO  (searcherExecutor-7-thread-1-processing-x:wenda) [   x:wenda] o.a.s.c.QuerySenderListener QuerySenderListener sending requests to Searcher@20b792e9[wenda] main{ExitableDirectoryReader(UninvertingDirectoryReader(Uninverting(_1(6.6.0):C12) Uninverting(_2(6.6.0):C1)))}
+2017-07-22 05:34:01.207 INFO  (searcherExecutor-7-thread-1-processing-x:wenda) [   x:wenda] o.a.s.c.QuerySenderListener QuerySenderListener done.
+2017-07-22 05:34:01.207 INFO  (searcherExecutor-7-thread-1-processing-x:wenda) [   x:wenda] o.a.s.c.SolrCore [wenda] Registered new searcher Searcher@20b792e9[wenda] main{ExitableDirectoryReader(UninvertingDirectoryReader(Uninverting(_1(6.6.0):C12) Uninverting(_2(6.6.0):C1)))}
+2017-07-22 05:34:05.897 INFO  (qtp1654589030-20) [   x:wenda] o.a.s.c.S.Request [wenda]  webapp=/solr path=/select params={q=欧文&hl=true&hl.simple.post=</font>&start=0&hl.fl=question_title,question_content&rows=10&wt=javabin&version=2&hl.simple.pre=<font+color%3Dred>} hits=3 status=0 QTime=5
+2017-07-22 05:34:15.193 INFO  (commitScheduler-10-thread-1) [   x:wenda] o.a.s.u.DirectUpdateHandler2 start commit{,optimize=false,openSearcher=false,waitSearcher=true,expungeDeletes=false,softCommit=false,prepareCommit=false}
+2017-07-22 05:34:15.193 INFO  (commitScheduler-10-thread-1) [   x:wenda] o.a.s.u.SolrIndexWriter Calling setCommitData with IW:org.apache.solr.update.SolrIndexWriter@2a021062
+2017-07-22 05:34:15.281 INFO  (commitScheduler-10-thread-1) [   x:wenda] o.a.s.s.SolrIndexSearcher Opening [Searcher@32fe9627[wenda] realtime]
+2017-07-22 05:34:15.282 INFO  (commitScheduler-10-thread-1) [   x:wenda] o.a.s.u.DirectUpdateHandler2 end_commit_flush

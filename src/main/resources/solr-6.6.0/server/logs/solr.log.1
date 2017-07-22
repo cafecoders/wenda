@@ -1,0 +1,52 @@
+2017-07-22 02:01:46.945 INFO  (main) [   ] o.e.j.s.Server jetty-9.3.14.v20161028
+2017-07-22 02:01:47.797 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter  ___      _       Welcome to Apache Solr? version 6.6.0
+2017-07-22 02:01:47.798 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter / __| ___| |_ _   Starting in standalone mode on port 8983
+2017-07-22 02:01:47.798 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter \__ \/ _ \ | '_|  Install dir: C:\Users\Administrator\Downloads\solr-6.6.0\solr-6.6.0
+2017-07-22 02:01:47.815 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter |___/\___/_|_|    Start time: 2017-07-22T02:01:47.799Z
+2017-07-22 02:01:47.816 INFO  (main) [   ] o.a.s.s.StartupLoggingUtils Property solr.log.muteconsole given. Muting ConsoleAppender named CONSOLE
+2017-07-22 02:01:47.832 INFO  (main) [   ] o.a.s.c.SolrResourceLoader Using system property solr.solr.home: C:\Users\Administrator\Downloads\solr-6.6.0\solr-6.6.0\server\solr
+2017-07-22 02:01:47.839 INFO  (main) [   ] o.a.s.c.SolrXmlConfig Loading container configuration from C:\Users\Administrator\Downloads\solr-6.6.0\solr-6.6.0\server\solr\solr.xml
+2017-07-22 02:01:48.333 INFO  (main) [   ] o.a.s.u.UpdateShardHandler Creating UpdateShardHandler HTTP client with params: socketTimeout=600000&connTimeout=60000&retry=true
+2017-07-22 02:01:48.565 INFO  (main) [   ] o.a.s.c.CorePropertiesLocator Found 1 core definitions underneath C:\Users\Administrator\Downloads\solr-6.6.0\solr-6.6.0\server\solr
+2017-07-22 02:01:48.567 INFO  (main) [   ] o.a.s.c.CorePropertiesLocator Cores are: [wenda]
+2017-07-22 02:01:48.675 INFO  (coreLoadExecutor-6-thread-1) [   x:wenda] o.a.s.c.SolrResourceLoader [wenda] Added 54 libs to classloader, from paths: [/C:/Users/Administrator/Downloads/solr-6.6.0/solr-6.6.0/contrib/clustering/lib, /C:/Users/Administrator/Downloads/solr-6.6.0/solr-6.6.0/contrib/extraction/lib, /C:/Users/Administrator/Downloads/solr-6.6.0/solr-6.6.0/contrib/langid/lib, /C:/Users/Administrator/Downloads/solr-6.6.0/solr-6.6.0/contrib/velocity/lib, /C:/Users/Administrator/Downloads/solr-6.6.0/solr-6.6.0/dist, /C:/Users/Administrator/Downloads/solr-6.6.0/solr-6.6.0/ext/ikanalyzer, /C:/Users/Administrator/Downloads/solr-6.6.0/solr-6.6.0/ext/mysql]
+2017-07-22 02:01:48.957 INFO  (coreLoadExecutor-6-thread-1) [   x:wenda] o.a.s.c.SolrConfig Using Lucene MatchVersion: 6.6.0
+2017-07-22 02:01:49.041 INFO  (main) [   ] o.e.j.s.Server Started @3311ms
+2017-07-22 02:01:49.247 INFO  (coreLoadExecutor-6-thread-1) [   x:wenda] o.a.s.s.IndexSchema [wenda] Schema name=example-data-driven-schema
+2017-07-22 02:01:49.531 INFO  (qtp1654589030-16) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json} status=0 QTime=107
+2017-07-22 02:01:50.172 INFO  (coreLoadExecutor-6-thread-1) [   x:wenda] o.a.s.s.IndexSchema Loaded schema example-data-driven-schema/1.6 with uniqueid field id
+2017-07-22 02:01:50.234 INFO  (coreLoadExecutor-6-thread-1) [   x:wenda] o.a.s.c.CoreContainer Creating SolrCore 'wenda' using configuration from instancedir C:\Users\Administrator\Downloads\solr-6.6.0\solr-6.6.0\server\solr\wenda, trusted=true
+2017-07-22 02:01:50.267 INFO  (coreLoadExecutor-6-thread-1) [   x:wenda] o.a.s.c.SolrCore solr.RecoveryStrategy.Builder
+2017-07-22 02:01:50.272 INFO  (coreLoadExecutor-6-thread-1) [   x:wenda] o.a.s.c.SolrCore [[wenda] ] Opening new SolrCore at [C:\Users\Administrator\Downloads\solr-6.6.0\solr-6.6.0\server\solr\wenda], dataDir=[C:\Users\Administrator\Downloads\solr-6.6.0\solr-6.6.0\server\solr\wenda\data\]
+2017-07-22 02:01:50.338 INFO  (coreLoadExecutor-6-thread-1) [   x:wenda] o.a.s.r.XSLTResponseWriter xsltCacheLifetimeSeconds=5
+2017-07-22 02:01:50.886 INFO  (coreLoadExecutor-6-thread-1) [   x:wenda] o.a.s.u.UpdateHandler Using UpdateLog implementation: org.apache.solr.update.UpdateLog
+2017-07-22 02:01:50.886 INFO  (coreLoadExecutor-6-thread-1) [   x:wenda] o.a.s.u.UpdateLog Initializing UpdateLog: dataDir= defaultSyncLevel=FLUSH numRecordsToKeep=100 maxNumLogsToKeep=10 numVersionBuckets=65536
+2017-07-22 02:01:50.930 INFO  (coreLoadExecutor-6-thread-1) [   x:wenda] o.a.s.u.CommitTracker Hard AutoCommit: if uncommited for 15000ms; 
+2017-07-22 02:01:50.930 INFO  (coreLoadExecutor-6-thread-1) [   x:wenda] o.a.s.u.CommitTracker Soft AutoCommit: disabled
+2017-07-22 02:01:51.137 INFO  (coreLoadExecutor-6-thread-1) [   x:wenda] o.a.s.s.SolrIndexSearcher Opening [Searcher@252f06b5[wenda] main]
+2017-07-22 02:01:51.160 INFO  (coreLoadExecutor-6-thread-1) [   x:wenda] o.a.s.r.ManagedResourceStorage File-based storage initialized to use dir: C:\Users\Administrator\Downloads\solr-6.6.0\solr-6.6.0\server\solr\wenda\conf
+2017-07-22 02:01:51.192 INFO  (coreLoadExecutor-6-thread-1) [   x:wenda] o.a.s.h.c.SpellCheckComponent Initializing spell checkers
+2017-07-22 02:01:51.200 INFO  (coreLoadExecutor-6-thread-1) [   x:wenda] o.a.s.s.DirectSolrSpellChecker init: {name=default,field=_text_,classname=solr.DirectSolrSpellChecker,distanceMeasure=internal,accuracy=0.5,maxEdits=2,minPrefix=1,maxInspections=5,minQueryLength=4,maxQueryFrequency=0.01}
+2017-07-22 02:01:51.203 INFO  (coreLoadExecutor-6-thread-1) [   x:wenda] o.a.s.h.c.QueryElevationComponent Loading QueryElevation from: C:\Users\Administrator\Downloads\solr-6.6.0\solr-6.6.0\server\solr\wenda\conf\elevate.xml
+2017-07-22 02:01:51.269 INFO  (coreLoadExecutor-6-thread-1) [   x:wenda] o.a.s.h.ReplicationHandler Commits will be reserved for  10000
+2017-07-22 02:01:51.354 INFO  (searcherExecutor-7-thread-1-processing-x:wenda) [   x:wenda] o.a.s.c.QuerySenderListener QuerySenderListener sending requests to Searcher@252f06b5[wenda] main{ExitableDirectoryReader(UninvertingDirectoryReader(Uninverting(_0(6.6.0):C1)))}
+2017-07-22 02:01:51.354 INFO  (searcherExecutor-7-thread-1-processing-x:wenda) [   x:wenda] o.a.s.c.QuerySenderListener QuerySenderListener done.
+2017-07-22 02:01:51.355 INFO  (searcherExecutor-7-thread-1-processing-x:wenda) [   x:wenda] o.a.s.h.c.SpellCheckComponent Loading spell index for spellchecker: default
+2017-07-22 02:01:51.358 INFO  (searcherExecutor-7-thread-1-processing-x:wenda) [   x:wenda] o.a.s.c.SolrCore [wenda] Registered new searcher Searcher@252f06b5[wenda] main{ExitableDirectoryReader(UninvertingDirectoryReader(Uninverting(_0(6.6.0):C1)))}
+2017-07-22 02:02:09.284 INFO  (qtp1654589030-22) [   ] o.a.s.c.TransientSolrCoreCacheDefault Allocating transient cache for 2147483647 transient cores
+2017-07-22 02:02:10.058 INFO  (qtp1654589030-21) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1500688929876} status=0 QTime=1
+2017-07-22 02:02:10.074 INFO  (qtp1654589030-19) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1500688929877} status=0 QTime=16
+2017-07-22 02:02:12.581 INFO  (qtp1654589030-16) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1500688929876} status=0 QTime=0
+2017-07-22 02:02:12.588 INFO  (qtp1654589030-16) [   x:wenda] o.a.s.c.S.Request [wenda]  webapp=/solr path=/admin/mbeans params={cat=QUERY&wt=json&_=1500688932569} status=0 QTime=4
+2017-07-22 02:02:12.602 INFO  (qtp1654589030-17) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1500688929877} status=0 QTime=20
+2017-07-22 02:02:12.638 INFO  (qtp1654589030-16) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1500688929876} status=0 QTime=0
+2017-07-22 02:02:12.642 INFO  (qtp1654589030-14) [   x:wenda] o.a.s.c.S.Request [wenda]  webapp=/solr path=/admin/mbeans params={cat=QUERY&wt=json&_=1500688932569} status=0 QTime=0
+2017-07-22 02:02:12.655 INFO  (qtp1654589030-16) [   x:wenda] o.a.s.c.S.Request [wenda]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=show-config&_=1500688932570} status=0 QTime=5
+2017-07-22 02:02:12.660 INFO  (qtp1654589030-20) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1500688929877} status=0 QTime=20
+2017-07-22 02:02:12.678 INFO  (qtp1654589030-16) [   x:wenda] o.a.s.c.S.Request [wenda]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status&_=1500688932570} status=0 QTime=0
+2017-07-22 02:02:47.415 INFO  (ShutdownMonitor) [   ] o.a.s.c.CoreContainer Shutting down CoreContainer instance=388357135
+2017-07-22 02:02:47.416 INFO  (ShutdownMonitor) [   ] o.a.s.m.SolrMetricManager Closing metric reporters for: solr.node
+2017-07-22 02:02:47.416 INFO  (ShutdownMonitor) [   ] o.a.s.m.SolrMetricManager Closing metric reporters for: solr.jvm
+2017-07-22 02:02:47.416 INFO  (ShutdownMonitor) [   ] o.a.s.m.SolrMetricManager Closing metric reporters for: solr.jetty
+2017-07-22 02:02:47.417 INFO  (coreCloseExecutor-12-thread-1) [   x:wenda] o.a.s.c.SolrCore [wenda]  CLOSING SolrCore org.apache.solr.core.SolrCore@335b6b79
+2017-07-22 02:02:47.423 INFO  (coreCloseExecutor-12-thread-1) [   x:wenda] o.a.s.m.SolrMetricManager Closing metric reporters for: solr.core.wenda

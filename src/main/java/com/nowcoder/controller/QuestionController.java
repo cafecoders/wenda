@@ -1,5 +1,8 @@
 package com.nowcoder.controller;
 
+import com.nowcoder.async.EventModel;
+import com.nowcoder.async.EventProducer;
+import com.nowcoder.async.EventType;
 import com.nowcoder.dao.CommentDAO;
 import com.nowcoder.model.*;
 import com.nowcoder.service.*;
@@ -42,6 +45,9 @@ public class QuestionController {
     @Autowired
     FollowService followService;
 
+    @Autowired
+    EventProducer eventProducer;
+
     @RequestMapping(value = "/question/add", method = RequestMethod.POST)
     @ResponseBody
     public String addQuestion(@RequestParam("title") String title,
@@ -59,6 +65,8 @@ public class QuestionController {
             question.setCreatedDate(new Date());
             question.setCommentCount(0);
             if(questionService.addQuestion(question) > 0){
+                eventProducer.fireEvent(new EventModel(EventType.ADD_QUESTION).setActorId(hostHolder.getUser().getId()).setEntityType(EntityType.ENTITY_QUESTION)
+                .setEntityId(question.getId()).setExt("question_title", question.getTitle()).setExt("question_content", question.getContent()));
                 return WendaUtil.getJSONString(0);
             }
         }catch (Exception e){

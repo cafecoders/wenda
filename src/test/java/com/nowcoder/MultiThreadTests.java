@@ -230,11 +230,11 @@ public class MultiThreadTests {
 
 	public static void main(String[] args){
 		//testThread();
-		//testSync();
+		testSync();
 		//testBlockingQueue();
 		//testThreadLocal();
 		//testExecutor();
 		//testAtomic();
-		testFuture();
+		//testFuture();
 	}
 }
